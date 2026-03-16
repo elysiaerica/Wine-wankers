@@ -1,0 +1,16 @@
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:2px;
+padding:24px;
+position:relative;
+overflow:hidden;
+}
+
+.card-accent{
+height:3px;
+position:absolute;
+top:0;
+left:0;
+right:0;
+}
