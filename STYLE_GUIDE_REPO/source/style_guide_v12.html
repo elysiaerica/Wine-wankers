@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wine Wankers — Brand Style Guide FINAL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Crushky';src:local('Crushky'),url('../source/Crushky.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:swap}
+
+/* ── RESET & VARS (from wine_wankers_landing_FINAL.html) ── */
+:root{
+  --deep:#0e0e0e;--warm:#1a1a1f;--card:#252528;
+  --cream:#f7f4ee;--paper:#fffef9;--pink:#e040a0;--wine:#6b1a2a;
+  --sr:#e84545;--so:#f5a623;--sy:#f7dc6f;--sg:#52be80;
+  --st:#48c9b0;--sb:#2db5e8;--sv:#af7ac5;--sm:#e040a0;
+  --txt-primary:#f7f4ee;--txt-dim:rgba(247,244,238,.65);--txt-ghost:rgba(247,244,238,.35);
+  --border:rgba(255,255,255,.07);
+  --display:'Syne',sans-serif;--fd:'Instrument Serif',Georgia,serif;
+  --fb:'Newsreader',Georgia,serif;--fm:'JetBrains Mono',monospace;
+  --ease-ui:cubic-bezier(.4,0,.2,1);--ease-enter:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--deep);color:var(--txt-primary);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* ── SPECTRUM STRIP ── */
+.ss{height:4px;background:linear-gradient(90deg,var(--sr) 0%,var(--so) 14%,var(--sy) 28%,var(--sg) 42%,var(--st) 56%,var(--sb) 70%,var(--sv) 84%,var(--sm) 100%)}
+.ss.thin{height:2px;opacity:.32}
+
+/* ── SCRIBBLE ── */
+.scribble{position:absolute;font-family:var(--fd);font-style:italic;color:var(--cream);opacity:.025;pointer-events:none;user-select:none;white-space:nowrap;line-height:1}
+
+/* ── NAV ── */
+nav{background:rgba(14,14,14,.96);backdrop-filter:blur(16px);padding:18px clamp(24px,4vw,60px);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;border-bottom:1px solid var(--border)}
+.nav-brand{font-family:var(--fd);font-style:italic;font-size:18px;color:var(--txt-primary)}
+.nav-brand span{color:var(--pink)}
+.nav-doc{font-family:var(--fm);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--txt-ghost)}
+
+/* ── COVER (v11_patched 3-layer prism) ── */
+.cover{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(60px,10vw,100px) clamp(24px,4vw,60px);position:relative;overflow:hidden;background:var(--deep)}
+.cover-prism{position:absolute;top:0;right:0;width:60%;height:100%;pointer-events:none;z-index:0;overflow:visible}
+.prism-glow{position:absolute;top:-5%;right:-8%;width:100%;height:110%;background:conic-gradient(from 196deg at 92% 8%,transparent 0deg,rgba(232,69,69,.11) 8deg,rgba(245,166,35,.14) 22deg,rgba(247,220,111,.19) 40deg,rgba(72,201,176,.13) 60deg,rgba(45,181,232,.11) 78deg,rgba(224,64,160,.10) 100deg,rgba(175,122,197,.07) 118deg,transparent 140deg);filter:blur(30px);mask-image:radial-gradient(ellipse at 88% 8%,black 10%,transparent 65%);-webkit-mask-image:radial-gradient(ellipse at 88% 8%,black 10%,transparent 65%)}
+.prism-glow-hot{position:absolute;top:2%;right:4%;width:75%;height:70%;background:conic-gradient(from 202deg at 96% 4%,transparent 0deg,rgba(232,69,69,.22) 6deg,rgba(245,166,35,.18) 18deg,rgba(247,220,111,.30) 32deg,rgba(72,201,176,.22) 50deg,rgba(45,181,232,.19) 66deg,rgba(224,64,160,.20) 84deg,transparent 102deg);filter:blur(8px);mask-image:radial-gradient(ellipse at 96% 4%,black 20%,transparent 72%);-webkit-mask-image:radial-gradient(ellipse at 96% 4%,black 20%,transparent 72%)}
+.prism-wine{position:absolute;bottom:-4%;right:-3%;width:55%;height:45%;background:radial-gradient(ellipse at 75% 80%,rgba(107,26,42,.30) 0%,rgba(107,26,42,0) 68%);filter:blur(22px)}
+.cover-inner{position:relative;z-index:1;max-width:820px}
+.cover-tag{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sy);margin-bottom:32px;display:flex;align-items:center;gap:12px}
+.cover-tag::before{content:'';width:28px;height:2px;background:var(--sy);display:inline-block}
+.cover-spectrum-word{font-family:var(--display);font-weight:800;font-size:clamp(56px,9vw,120px);line-height:.88;letter-spacing:-.02em;text-transform:uppercase;color:var(--cream);margin-bottom:32px}
+.cover-h1{font-family:var(--display);font-weight:800;font-size:clamp(36px,5vw,64px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase;color:rgba(247,244,238,.55);margin-bottom:14px}
+.cover-sub{font-family:var(--fd);font-style:italic;font-size:clamp(16px,2vw,22px);color:var(--txt-ghost)}
+.cover-meta{display:flex;gap:40px;margin-top:40px;padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap}
+.cm-label{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:4px}
+.cm-val{font-family:var(--fb);font-style:italic;font-size:14px;color:var(--txt-dim)}
+.cover-bars{position:absolute;bottom:clamp(28px,4vw,48px);left:clamp(24px,4vw,60px);z-index:3;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+
+/* ── REFRACTION BARS ── */
+.rm-bar{height:3px;border-radius:2px}
+.rm-bar.r{background:var(--sr);width:62px}
+.rm-bar.o{background:var(--so);width:54px}
+.rm-bar.y{background:var(--sy);width:46px}
+.rm-bar.g{background:var(--sg);width:38px}
+.rm-bar.t{background:var(--st);width:30px}
+.rm-bar.b{background:var(--sb);width:24px}
+.rm-bar.v{background:var(--sv);width:18px}
+.rm-bar.pk{background:var(--pink);width:12px}
+
+/* ── PAGE SECTIONS ── */
+.page{padding:clamp(60px,8vw,100px) clamp(24px,4vw,60px);border-top:1px solid var(--border);position:relative;background:var(--deep)}
+.page.light{background:var(--cream);color:var(--deep)}
+.page-label{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.page-label .n{color:var(--sy)}
+.page.light .page-label{color:rgba(14,14,14,.4)}
+.page.light .page-label .n{color:var(--wine)}
+.page h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.5vw,42px);color:var(--cream);margin-bottom:24px;line-height:1}
+.page.light h2{color:var(--deep)}
+.page-intro,.page p,.page li{font-family:var(--fb);font-size:clamp(15px,1.6vw,17px);line-height:1.75;color:var(--txt-dim);max-width:68ch}
+.page.light .page-intro,.page.light p,.page.light li{color:rgba(14,14,14,.65)}
+.page ul{list-style:none;padding:0;margin:16px 0}
+.page li{padding:6px 0;border-bottom:1px solid var(--border)}
+.page.light li{border-bottom-color:rgba(0,0,0,.08)}
+.page li:last-child{border-bottom:none}
+.page li::before{content:'→ ';color:var(--sy);font-family:var(--fm)}
+.page.light li::before{color:var(--wine)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:start;margin-top:24px}
+@media(max-width:768px){.two-col{grid-template-columns:1fr}}
+
+/* ── CARDS ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:2px;padding:24px;margin-bottom:16px;position:relative;overflow:hidden}
+.card-accent{height:3px;position:absolute;top:0;left:0;right:0}
+.card-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:8px}
+.card h3{font-family:var(--fd);font-style:italic;font-size:clamp(17px,2vw,22px);color:var(--cream);margin-bottom:8px}
+.card p{font-family:var(--fb);font-size:14px;line-height:1.65;color:var(--txt-dim);max-width:none}
+
+/* ── RULE BLOCKS ── */
+.rule-block{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:2px;padding:18px 22px;margin-bottom:12px;position:relative}
+.rule-block.locked{border-color:rgba(247,220,111,.2)}
+.rule-block.locked::after{content:'LOCKED';font-family:var(--fm);font-size:8px;letter-spacing:.12em;color:var(--sy);position:absolute;top:12px;right:14px}
+.rule-block h4{font-family:var(--fd);font-style:italic;font-size:16px;color:var(--cream);margin-bottom:6px}
+.rule-block p{font-family:var(--fm);font-size:12px;line-height:1.8;color:var(--txt-dim);max-width:none}
+.page.light .rule-block{background:rgba(0,0,0,.03);border-color:rgba(0,0,0,.08)}
+.page.light .rule-block h4{color:var(--deep)}
+.page.light .rule-block p{color:rgba(14,14,14,.6)}
+.page.light .rule-block.locked{border-color:rgba(107,26,42,.2)}
+.page.light .rule-block.locked::after{color:var(--wine)}
+.note{font-family:var(--fb);font-style:italic;font-size:13px;color:var(--txt-ghost);margin-top:10px}
+.page.light .note{color:rgba(14,14,14,.45)}
+
+/* ── DO / DON'T ── */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media(max-width:640px){.dd{grid-template-columns:1fr}}
+.do,.dont{padding:16px 20px;border-radius:2px}
+.do{background:rgba(82,190,128,.05);border:1px solid rgba(82,190,128,.18)}
+.dont{background:rgba(232,69,69,.05);border:1px solid rgba(232,69,69,.18)}
+.do-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--sg);margin-bottom:6px}
+.dont-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--sr);margin-bottom:6px}
+.do p,.dont p{font-family:var(--fb);font-size:13px;color:var(--txt-dim);max-width:none}
+
+/* ── TYPE SPECIMENS (light page — no dark bg) ── */
+.type-spec{margin:20px 0;padding:20px 24px;background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.09);border-radius:2px}
+.type-spec.dark-spec{background:var(--card);border-color:var(--border)}
+.spec-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(14,14,14,.38);margin-bottom:10px}
+.type-spec.dark-spec .spec-lbl{color:var(--txt-ghost)}
+.rainbow-demo{font-family:var(--display);font-weight:800;font-size:clamp(36px,5vw,72px);line-height:.9;letter-spacing:-.02em;text-transform:lowercase;color:var(--deep)}
+
+/* ── TYPE SCALE ── */
+.type-scale{display:flex;flex-direction:column;margin-top:16px}
+.ts-row{display:grid;grid-template-columns:80px 1fr;gap:0;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.07);align-items:baseline}
+.ts-row:last-child{border-bottom:none}
+.ts-label{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(14,14,14,.38)}
+.ts-label.bold-serif{font-family:var(--fd);font-style:italic;font-weight:400;font-size:11px;color:rgba(14,14,14,.6);letter-spacing:0;text-transform:none}
+.ts-val{font-family:var(--fb);font-size:12px;color:rgba(14,14,14,.6)}
+
+/* ── SWATCHES ── */
+.swatches{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.sw{text-align:center}
+.sw-block{width:48px;height:48px;border-radius:2px;border:1px solid var(--border)}
+.sw-lbl{font-family:var(--fm);font-size:8px;color:var(--txt-ghost);margin-top:4px}
+
+/* ── COLOUR TABLE ── */
+.col-table{width:100%;border-collapse:collapse;margin-top:16px}
+.col-table th{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);padding:10px 14px;border-bottom:1px solid var(--border);text-align:left;font-weight:400}
+.col-table td{font-family:var(--fb);font-size:14px;color:var(--txt-dim);padding:12px 14px;border-bottom:1px solid var(--border);line-height:1.5;vertical-align:top}
+.col-table td:first-child{font-family:var(--fm);font-size:10px;color:var(--cream);letter-spacing:.06em}
+
+/* ── DESIGN SYSTEM ── */
+.sys-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);margin-top:20px}
+@media(max-width:640px){.sys-grid{grid-template-columns:1fr}}
+.sys-card{background:var(--card);padding:24px}
+.sys-card-label{font-family:var(--fm);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:8px}
+.sys-card h4{font-family:var(--fd);font-style:italic;font-size:18px;color:var(--cream);margin-bottom:10px}
+.sys-card p{font-family:var(--fb);font-size:13px;color:var(--txt-dim);line-height:1.65;max-width:none}
+.ref-bars{display:flex;flex-direction:column;gap:5px;margin:14px 0}
+.ref-bar{height:4px;border-radius:2px}
+.scribble-demo{background:var(--card);padding:48px 24px 40px;border:1px solid var(--border);border-radius:2px;margin-top:12px;position:relative;overflow:hidden;text-align:center}
+.scribble-word{font-family:var(--fd);font-style:italic;font-size:clamp(80px,10vw,160px);line-height:1;color:rgba(247,244,238,.035);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none}
+
+/* ── TERRITORY GRID ── */
+.territory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:20px}
+@media(max-width:768px){.territory-grid{grid-template-columns:1fr}}
+.territory-card{background:var(--card);padding:24px 22px}
+.territory-card.selected{background:rgba(247,220,111,.04);outline:2px solid rgba(247,220,111,.14);outline-offset:-2px}
+.territory-badge{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.territory-badge.sel{color:var(--sy)}
+.territory-badge.rej{color:var(--txt-ghost)}
+.territory-card h4{font-family:var(--fd);font-style:italic;font-size:18px;color:var(--cream);margin-bottom:8px;line-height:1.2}
+.territory-card h4.rej-h{opacity:.4;text-decoration:line-through}
+.territory-card p{font-family:var(--fb);font-size:13px;color:var(--txt-dim);line-height:1.65;max-width:none}
+
+/* ── HERO DEMO — iframe (section 02) ── */
+.lp-iframe-wrap{margin-top:20px;max-width:860px;border-radius:6px;overflow:hidden;border:1px solid var(--border)}
+.lp-iframe-chrome{background:var(--card);padding:10px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
+.lp-chrome-dots{display:flex;gap:6px}
+.lp-chrome-dot{width:10px;height:10px;border-radius:50%}
+.lp-chrome-url{flex:1;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:3px;padding:4px 12px;font-family:var(--fm);font-size:10px;color:var(--txt-ghost);letter-spacing:.04em}
+.lp-iframe-wrap iframe{display:block;width:100%;height:580px;border:none}
+
+/* ── LANDING PAGE MOCKUP (section 10) ── */
+.browser-chrome{background:var(--card);border:1px solid var(--border);border-radius:6px 6px 0 0;padding:10px 16px;display:flex;align-items:center;gap:10px}
+.browser-dots{display:flex;gap:6px}
+.browser-dot{width:10px;height:10px;border-radius:50%}
+.browser-url{flex:1;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:3px;padding:4px 12px;font-family:var(--fm);font-size:10px;color:var(--txt-ghost);letter-spacing:.04em}
+.hero-mockup-panel{background:#0e0e0e;border:1px solid rgba(0,0,0,.2);border-top:none;border-radius:0 0 6px 6px;overflow:hidden;position:relative}
+.lp-beams{display:flex;flex-direction:column;position:absolute;left:0;top:0;bottom:0;width:5px;z-index:1}
+.lp-beam{flex:1}
+.lp-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;z-index:2;flex-wrap:wrap;gap:8px}
+.lp-nav-brand{font-family:'Crushky','Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:var(--pink)}
+.lp-nav-links{display:flex;gap:20px}
+.lp-nav-link{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost)}
+.lp-nav-cta{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;background:var(--sy);color:#000;border-radius:2px}
+.lp-hero-content{padding:48px 28px 44px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;position:relative;z-index:2}
+.lp-tagline{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--txt-ghost)}
+.lp-h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,52px);line-height:.92;letter-spacing:-.02em;text-transform:lowercase;color:var(--cream)}
+.lp-support{font-family:var(--fb);font-style:italic;font-size:13px;color:var(--txt-dim);max-width:340px;text-align:center}
+.lp-email-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
+.lp-email-input{padding:10px 16px;background:rgba(255,255,255,.05);border:1px solid var(--border);color:var(--txt-ghost);font-family:var(--fb);font-size:12px;border-radius:2px;width:200px}
+.lp-email-btn{padding:10px 18px;background:var(--sy);color:#000;font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;white-space:nowrap}
+.lp-next{font-family:var(--fb);font-style:italic;font-size:11px;color:var(--txt-ghost)}
+
+/* ── INSTAGRAM ── */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+@media(max-width:768px){.ig-grid{grid-template-columns:1fr}}
+.ig-post{aspect-ratio:1;border-radius:4px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.ig-label{font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:4px;position:relative;z-index:1}
+.ig-title{font-family:'Crushky','Instrument Serif',Georgia,serif;font-style:italic;font-size:26px;line-height:.95;color:var(--cream);position:relative;z-index:1}
+.ig-divider{display:flex;align-items:center;gap:12px;margin:28px 0 20px;opacity:.35}
+.ig-divider-line{flex:1;height:1px;background:var(--txt-ghost)}
+.ig-divider-icon{color:var(--txt-ghost);flex-shrink:0;line-height:0}
+.ig-meta{font-family:var(--fm);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-ghost);margin-top:6px;position:relative;z-index:1}
+.ig-annotation{position:absolute;top:16px;right:14px;font-family:var(--fd);font-style:italic;font-size:11px;color:var(--sy);transform:rotate(-4deg);z-index:2}
+.ig-badge{position:absolute;top:12px;right:12px;background:var(--sr);color:#fff;font-family:var(--fm);font-size:8px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;z-index:2}
+.ig-manifesto{margin-top:24px;padding:28px;background:var(--card);border:1px solid var(--border);border-radius:2px}
+.ig-manifesto-label{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--sy);margin-bottom:10px}
+.ig-manifesto-line{font-family:var(--fd);font-style:italic;font-size:clamp(18px,2.5vw,28px);color:var(--cream);margin-bottom:10px;line-height:1.2}
+.ig-manifesto p{font-family:var(--fb);font-size:14px;color:var(--txt-dim);line-height:1.7;max-width:none;margin-bottom:8px}
+
+/* ── BRAND SCALING ── */
+.scaling-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:20px}
+@media(max-width:900px){.scaling-grid{grid-template-columns:1fr}}
+.scaling-card{background:var(--card);padding:28px 24px}
+.scaling-card-label{font-family:var(--fm);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:8px}
+.scaling-card h3{font-family:var(--fd);font-style:italic;font-size:20px;color:var(--cream);margin-bottom:10px;line-height:1.2}
+.scaling-card p{font-family:var(--fb);font-size:13px;color:var(--txt-dim);line-height:1.65;max-width:none}
+
+/* ── COMMUNITY ENGINE ── */
+.founder-quote{padding:32px 36px;border:1px solid rgba(247,220,111,.15);background:rgba(247,220,111,.025);margin-top:24px;margin-bottom:28px;border-radius:2px}
+.founder-quote blockquote{font-family:var(--fd);font-style:italic;font-size:clamp(16px,2vw,21px);color:var(--cream);line-height:1.55;margin-bottom:12px}
+.founder-quote cite{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost)}
+.eco-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}
+@media(max-width:768px){.eco-layout{grid-template-columns:1fr}}
+.eco-layer{background:var(--card);border:1px solid var(--border);padding:24px;border-radius:2px}
+.eco-layer-label{font-family:var(--fm);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.eco-layer-label::before{content:'';width:16px;height:2px;background:var(--sy);display:inline-block}
+.eco-nodes{display:flex;flex-direction:column;gap:6px}
+.eco-node{font-family:var(--fb);font-size:13px;color:var(--txt-dim);padding:10px 14px;background:rgba(255,255,255,.02);border-left:2px solid var(--border);line-height:1.55}
+.eco-node.primary{border-left-color:var(--sy);color:var(--cream)}
+.eco-closing{font-family:var(--fd);font-style:italic;font-size:clamp(16px,2vw,20px);color:var(--txt-dim);text-align:center;margin-top:28px;padding:20px 0;border-top:1px solid var(--border)}
+
+/* ── RAINBOW STACK — hero only ── */
+.hero-title span.rainbow-stack{text-shadow:2px 2px 0 #e84545,4px 4px 0 #f5a623,6px 6px 0 #f7dc6f,8px 8px 0 #52be80,10px 10px 0 #48c9b0,12px 12px 0 #2db5e8,14px 14px 0 #af7ac5}
+.cover-spectrum-word.rainbow-stack{text-shadow:2px 2px 0 #e84545,4px 4px 0 #f5a623,6px 6px 0 #f7dc6f,8px 8px 0 #52be80,10px 10px 0 #48c9b0,12px 12px 0 #2db5e8,14px 14px 0 #af7ac5}
+
+/* ── FOOTER ── */
+footer{padding:48px clamp(24px,4vw,60px);border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer p{font-family:var(--fm);font-size:10px;letter-spacing:.08em;color:var(--txt-ghost)}
+.footer-bars{display:flex;flex-direction:column;gap:4px;align-items:flex-end;padding:0 0 48px clamp(24px,4vw,60px)}
+</style>
+</head>
+<body>
+
+<div class="ss"></div>
+
+<nav>
+  <div class="nav-brand">Wine <span>Wankers</span></div>
+  <div class="nav-doc">Brand Style Guide · FINAL</div>
+</nav>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-prism">
+    <div class="prism-glow"></div>
+    <div class="prism-glow-hot"></div>
+    <div class="prism-wine"></div>
+  </div>
+  <div class="cover-bars">
+    <div class="rm-bar r"></div>
+    <div class="rm-bar o"></div>
+    <div class="rm-bar y"></div>
+    <div class="rm-bar g"></div>
+    <div class="rm-bar t"></div>
+    <div class="rm-bar b"></div>
+    <div class="rm-bar v"></div>
+  </div>
+  <div class="cover-inner">
+    <div class="cover-tag">Brand Direction</div>
+    <div class="cover-spectrum-word rainbow-stack">Spectrum</div>
+    <h1 class="cover-h1">Brand<br>Style<br>Guide</h1>
+    <p class="cover-sub">The anti-pretentious pour club — complete visual and verbal system</p>
+    <div class="cover-meta">
+      <div><div class="cm-label">Version</div><div class="cm-val">FINAL · March 2026</div></div>
+      <div><div class="cm-label">Producer</div><div class="cm-val">Coupeco</div></div>
+      <div><div class="cm-label">Status</div><div class="cm-val">Production-ready</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 01 BRAND POSITIONING -->
+<div class="page" id="section-01">
+  <div class="page-label"><span class="n">01</span> Brand Positioning</div>
+  <h2>The Anti-Pretentious Pour Club</h2>
+  <div class="two-col">
+    <div>
+      <div class="card"><div class="card-accent" style="background:linear-gradient(90deg,var(--sr),var(--so),var(--sy))"></div>
+        <div class="card-lbl">Core statement</div><h3>The anti-pretentious pour club.</h3>
+        <p>Community-first, anti-gatekeeping, welcoming to people who like wine but hate wine culture performance.</p>
+      </div>
+      <div class="card"><div class="card-accent" style="background:linear-gradient(90deg,var(--sg),var(--st),var(--sb))"></div>
+        <div class="card-lbl">Hero line (locked)</div><h3>good wine. weird people.</h3>
+        <p>"good wine." is plain cream. Only "weird" carries the rainbow stack effect. Both lowercase.</p>
+      </div>
+      <div class="card"><div class="card-accent" style="background:linear-gradient(90deg,var(--sv),var(--sm),var(--sr))"></div>
+        <div class="card-lbl">Support line (locked)</div><h3>"sick of wine snobs, spit buckets and sommeliers?"</h3>
+        <p>Italic. Lowercase. One sentence that disarms wine-culture gatekeepers before they arrive.</p>
+      </div>
+    </div>
+    <div>
+      <p class="page-intro">Wine Wankers occupies the unclaimed centre: LGBTQ+ community × Natural wine culture × Local IRL events. No competitor holds this intersection.</p>
+      <div style="margin-top:20px">
+        <div class="rule-block locked">
+          <h4>Primary CTA</h4>
+          <p>JOIN THE CLUB — all caps, JetBrains Mono, glow button (rainbow activates on hover only, calm at rest)</p>
+        </div>
+        <div class="rule-block">
+          <h4>Manifesto close</h4>
+          <p>NO SNOBS · NO SPIT BUCKETS · NO SOMMELIER COURSE REQUIRED · JUST GOOD WINE &amp; WEIRD PEOPLE · LOVE, WINE WANKERS xx</p>
+        </div>
+        <div class="rule-block">
+          <h4>Optional copy nuggets</h4>
+          <p>good wine for people who actually drink it · wine belongs in a glass, not on a pedestal · because life's too short for bad wine and boring people</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 01.5 STRATEGIC RATIONALE -->
+<div class="page" id="section-01-5">
+  <div class="page-label"><span class="n">01.5</span> Strategic Rationale</div>
+  <h2>Why Spectrum Won</h2>
+  <p class="page-intro">Three viable territories were evaluated against Wine Wankers' positioning goals, community makeup, and founder vision. One was selected. Two were rejected.</p>
+  <div class="territory-grid">
+    <div class="territory-card">
+      <div class="territory-badge rej">Territory A — Rejected</div>
+      <h4 class="rej-h">Suits, Hipsters, Everyone</h4>
+      <p>Eclectic, inclusive, broad direction. Strong execution risk — without a visual signature, the brand reads as another generic wine subscription. No ownable territory, no community signal.</p>
+    </div>
+    <div class="territory-card selected">
+      <div class="territory-badge sel">Territory B — Selected ✓</div>
+      <h4>The Rainbow Direction</h4>
+      <p>Makes Nick's existing rainbow identity ownable and intelligent. Executed as optical science — refraction bars, prismatic light, chromatic displacement on "weird". The spectrum reads as pride, science, and counterculture simultaneously without being literal. This is the brand.</p>
+    </div>
+    <div class="territory-card">
+      <div class="territory-badge rej">Territory C — Rejected</div>
+      <h4 class="rej-h">Natty Wine Eclectic</h4>
+      <p>Hand-drawn, lo-fi, zine aesthetic. Better suited for Chasing Rainbows Wine Co. as a standalone retail brand. Lacks the visual authority and scalability needed for Wine Wankers as a community platform.</p>
+    </div>
+  </div>
+  <div class="rule-block" style="margin-top:24px">
+    <h4>Why Spectrum Works</h4>
+    <p>The Spectrum direction transforms a rainbow — already part of Nick's existing visual language — into an optical phenomenon. Refraction bars as the brand signature. Chromatic displacement on "weird" as the hero typographic effect. Dark backgrounds as the premium canvas. The system reads as a distinct, ownable visual identity that no competitor in the natural wine space has claimed.</p>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 02 HERO HIERARCHY -->
+<div class="page" id="section-02">
+  <div class="page-label"><span class="n">02</span> Hero Hierarchy</div>
+  <h2>Locked Hero System</h2>
+  <p class="page-intro">This hierarchy is final. Do not reorder, replace, or simplify these elements.</p>
+  <div class="lp-iframe-wrap">
+    <div class="lp-iframe-chrome">
+      <div class="lp-chrome-dots">
+        <div class="lp-chrome-dot" style="background:#e84545"></div>
+        <div class="lp-chrome-dot" style="background:#f5a623"></div>
+        <div class="lp-chrome-dot" style="background:#52be80"></div>
+      </div>
+      <div class="lp-chrome-url">winewankers.com.au</div>
+    </div>
+    <iframe src="../wine_wankers_landing_FINAL.html" title="Wine Wankers Landing Page" scrolling="no"></iframe>
+  </div>
+  <div style="margin-top:24px">
+    <div class="rule-block locked"><h4>1 — Positioning kicker</h4><p>THE ANTI-PRETENTIOUS POUR CLUB · JetBrains Mono · 11px · letter-spacing .22em · uppercase · color var(--txt-ghost)</p></div>
+    <div class="rule-block locked"><h4>2 — PNG Logo</h4><p>logo.png asset always. max-width:560px. Never replace with styled text. Logo must feel dominant and memorable.</p></div>
+    <div class="rule-block locked"><h4>3–4 — Hero title</h4><p>Syne 800 · clamp(52px,8vw,110px) · lowercase · line-height:.9 · letter-spacing:-.02em. "good wine." plain cream. Only "weird" has rainbow-stack. "people." is plain cream.</p></div>
+    <div class="rule-block locked"><h4>5 — Support line</h4><p>Newsreader italic · clamp(15px,1.8vw,18px) · color var(--txt-dim) · max-width 440px · centered</p></div>
+    <div class="rule-block locked"><h4>6 — CTA: JOIN THE CLUB</h4><p>Glow button. Yellow (#f7dc6f) background at rest, dark text. Rainbow gradient border activates on hover only. JetBrains Mono · 11px · 0.2em tracking.</p></div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 03 TYPOGRAPHY — LIGHT PAGE -->
+<div class="page light" id="section-03">
+  <div class="page-label"><span class="n">03</span> Typography</div>
+  <h2>Type System</h2>
+  <div class="two-col">
+    <div>
+      <div class="rule-block locked"><h4>Hero display — Syne ExtraBold 800</h4><p>Used for hero title and key statement lines. Lowercase. Tight tracking -0.02em. Line-height 0.9. NOT used for body section headings.</p></div>
+      <div class="rule-block"><h4>Body copy — Newsreader</h4><p>Serif, editorial, warm. Paragraphs, descriptions, support copy. Italic variant for quotes, support lines, and emphasis.</p></div>
+      <div class="rule-block"><h4>UI / labels — JetBrains Mono</h4><p>All uppercase labels, badges, metadata, nav links, buttons, captions. Monospace, technical feel.</p></div>
+      <div class="rule-block"><h4>Section headings — Instrument Serif</h4><p>Used for section h2/h3 headings throughout page body. Often italic. Gives warm editorial quality to section titles.</p></div>
+      <p class="note">Crushky is logo language only — never used for body text, headings, or UI elements. Instagram and physical print graphics only.</p>
+      <div class="type-scale">
+        <div class="ts-row"><span class="ts-label bold-serif">H1 / Hero</span><span class="ts-val">Syne 800 · clamp(52px,8vw,110px) · lowercase · -0.02em</span></div>
+        <div class="ts-row"><span class="ts-label bold-serif">H2 / Section</span><span class="ts-val">Instrument Serif · clamp(26px,3.5vw,42px) · often italic</span></div>
+        <div class="ts-row"><span class="ts-label">H3 / Sub</span><span class="ts-val">Instrument Serif · 20–24px · italic</span></div>
+        <div class="ts-row"><span class="ts-label">Body Lg</span><span class="ts-val">Newsreader · 17–18px · line-height 1.75</span></div>
+        <div class="ts-row"><span class="ts-label">Body</span><span class="ts-val">Newsreader · 15–16px · line-height 1.7</span></div>
+        <div class="ts-row"><span class="ts-label">Caption</span><span class="ts-val">Newsreader italic · 13px</span></div>
+        <div class="ts-row"><span class="ts-label">Label / UI</span><span class="ts-val">JetBrains Mono · 10–11px · uppercase · 0.14–0.22em</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="type-spec">
+        <div class="spec-lbl">Syne 800 — Hero Title</div>
+        <div class="rainbow-demo">good wine.<br>weird people.</div>
+      </div>
+      <div class="type-spec">
+        <div class="spec-lbl">Instrument Serif Italic — Section Heading</div>
+        <div style="font-family:var(--fd);font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--deep);line-height:1.1">Shoulder to shoulder.<br>The lights are low.</div>
+      </div>
+      <div class="type-spec">
+        <div class="spec-lbl">Newsreader — Body</div>
+        <div style="font-family:var(--fb);font-size:16px;color:rgba(14,14,14,.65);line-height:1.7">Wine Wankers exists for people who are curious enough to show up, not qualified enough to pass a tasting exam.</div>
+      </div>
+      <div class="type-spec">
+        <div class="spec-lbl">JetBrains Mono — Label</div>
+        <div style="font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(14,14,14,.42)">18 seats · always sells out · west end, brisbane</div>
+      </div>
+      <div class="type-spec dark-spec">
+        <div class="spec-lbl">Crushky — Logo Language Only</div>
+        <div style="font-family:'Crushky','Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(24px,3vw,40px);color:var(--pink);letter-spacing:.02em">WINE WANKERS</div>
+        <p style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-ghost);margin-top:8px;max-width:none">Instagram social graphics · never used in web UI</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 04 COLOUR -->
+<div class="page" id="section-04">
+  <div class="page-label"><span class="n">04</span> Colour</div>
+  <h2>Colour System</h2>
+  <p class="page-intro">Dark-first. Spectrum as movement and interaction — not static decoration. Rough mix: 60% dark, 25% cream/paper, 7% logo pink, 7% total spectrum, 1% wine stain.</p>
+  <div class="two-col" style="margin-top:24px">
+    <div>
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:8px">Base palette</div>
+      <div class="swatches">
+        <div class="sw"><div class="sw-block" style="background:#0e0e0e"></div><div class="sw-lbl">#0e0e0e<br>deep</div></div>
+        <div class="sw"><div class="sw-block" style="background:#1a1a1f"></div><div class="sw-lbl">#1a1a1f<br>warm</div></div>
+        <div class="sw"><div class="sw-block" style="background:#252528"></div><div class="sw-lbl">#252528<br>card</div></div>
+        <div class="sw"><div class="sw-block" style="background:#f7f4ee"></div><div class="sw-lbl">#f7f4ee<br>cream</div></div>
+        <div class="sw"><div class="sw-block" style="background:#e040a0"></div><div class="sw-lbl">#e040a0<br>pink</div></div>
+        <div class="sw"><div class="sw-block" style="background:#6b1a2a"></div><div class="sw-lbl">#6b1a2a<br>wine</div></div>
+      </div>
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);margin-top:20px;margin-bottom:8px">Spectrum — 7 values only</div>
+      <div class="swatches">
+        <div class="sw"><div class="sw-block" style="background:#e84545"></div><div class="sw-lbl">#e84545</div></div>
+        <div class="sw"><div class="sw-block" style="background:#f5a623"></div><div class="sw-lbl">#f5a623</div></div>
+        <div class="sw"><div class="sw-block" style="background:#f7dc6f"></div><div class="sw-lbl">#f7dc6f</div></div>
+        <div class="sw"><div class="sw-block" style="background:#52be80"></div><div class="sw-lbl">#52be80</div></div>
+        <div class="sw"><div class="sw-block" style="background:#48c9b0"></div><div class="sw-lbl">#48c9b0</div></div>
+        <div class="sw"><div class="sw-block" style="background:#2db5e8"></div><div class="sw-lbl">#2db5e8</div></div>
+        <div class="sw"><div class="sw-block" style="background:#af7ac5"></div><div class="sw-lbl">#af7ac5</div></div>
+      </div>
+      <div class="rule-block" style="margin-top:20px"><h4>Spectrum usage</h4><p>Rainbow and spectrum colours are movement and interaction signals only. Uses: rainbow-stack on "weird", glow button hover, spectrum strip decorators, section accents. Pink (#e040a0) is logo only — not part of the 7-colour spectrum gradient sequence.</p></div>
+      <div class="rule-block"><h4>Logo pink #e040a0</h4><p>Used for the logo PNG. Nav brand mark. Footer brand text. Not used as a dominant background fill.</p></div>
+      <div class="rule-block"><h4>Yellow #f7dc6f</h4><p>Primary CTA background. Active event price display. Section label numbers. Most functional of the spectrum colours.</p></div>
+    </div>
+    <div>
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:8px">Colour hierarchy</div>
+      <table class="col-table">
+        <thead><tr><th>Role</th><th>Colour</th><th>Weight</th></tr></thead>
+        <tbody>
+          <tr><td>Primary environment</td><td>Deep Glass #0e0e0e</td><td>60% dominant canvas</td></tr>
+          <tr><td>Warmth / light pages</td><td>Aged Paper #f7f4ee</td><td>25% light sections, text</td></tr>
+          <tr><td>Action / CTA</td><td>Yellow #f7dc6f</td><td>~3% most visible functional</td></tr>
+          <tr><td>Identity</td><td>Logo pink #e040a0</td><td>~4% brand mark only</td></tr>
+          <tr><td>Energy / movement</td><td>Spectrum ×7</td><td>~7% interaction signals</td></tr>
+          <tr><td>Depth</td><td>Wine stain #6b1a2a</td><td>~1% callouts, cover depth</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 05 RAINBOW STACK -->
+<div class="page" id="section-05">
+  <div class="page-label"><span class="n">05</span> Rainbow Stack Rule</div>
+  <h2 style="text-shadow:2px 2px 0 #e84545,4px 4px 0 #f5a623,6px 6px 0 #f7dc6f,8px 8px 0 #52be80,10px 10px 0 #48c9b0,12px 12px 0 #2db5e8,14px 14px 0 #af7ac5">The Rainbow Stack</h2>
+  <p class="page-intro">Layered text-shadow that creates chromatic displacement — the brand's primary typographic signature.</p>
+  <div style="margin-top:20px">
+    <div class="rule-block locked"><h4>Only "weird" receives the rainbow stack</h4><p>"good wine." is plain cream. "people." is plain cream. Only the word "weird" in the hero title gets rainbow text-shadow. This is a locked decision and may not be changed.</p></div>
+    <div class="rule-block"><h4>CSS implementation — exact selector required</h4>
+      <p>.hero-title span.rainbow-stack { text-shadow: 2px 2px 0 #e84545, 4px 4px 0 #f5a623, 6px 6px 0 #f7dc6f, 8px 8px 0 #52be80, 10px 10px 0 #48c9b0, 12px 12px 0 #2db5e8, 14px 14px 0 #af7ac5; }</p>
+    </div>
+  </div>
+  <div class="dd">
+    <div class="do"><div class="do-lbl">Do</div><p>Apply .rainbow-stack to the word "weird" inside .hero-title. Selector must be .hero-title span.rainbow-stack — not .hero-title directly.</p></div>
+    <div class="dont"><div class="dont-lbl">Don't</div><p>Apply rainbow-stack to "wine", "people", .hero-title directly, section headings, body text, or any element other than the single word "weird".</p></div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 06 UX COMPONENTS -->
+<div class="page" id="section-06">
+  <div class="page-label"><span class="n">06</span> UX Components</div>
+  <h2>Approved Interaction Systems</h2>
+  <p class="page-intro">Five interaction systems only. Do not introduce additional glow systems, animated logos, or text effects beyond these.</p>
+  <div style="margin-top:20px">
+    <div class="rule-block locked"><h4>1 — Ethereal Hero Background</h4><p>Low-intensity atmospheric colour via radial gradients + conic-gradient prism. Hero section only. Non-distracting. Elements: .hero-bg (radial gradients) + .hero-prism / .hero-prism-glow / .hero-prism-hot (conic, top-right).</p></div>
+    <div class="rule-block locked"><h4>2 — Glow Button (Rainbow CTA Hover)</h4><p>Applies to: hero CTA, event buttons, footer signup. Default: calm yellow fill, dark text. Hover: rainbow gradient border animates via ::before + gradient-shift keyframe. Opacity 0 at rest → 1 on hover. transform: translateY(-2px) on hover.</p></div>
+    <div class="rule-block locked"><h4>3 — Interactive Card Glow</h4><p>Applies to: event cards, fridge/wine cards only. Pointer-proximity radial gradient via --glow-x/--glow-y CSS vars updated by JS mousemove. ::after pseudo-element. Directional and tactile — not a permanent static halo.</p></div>
+    <div class="rule-block locked"><h4>4 — Prism Border (Manifesto Section)</h4><p>Manifesto inner wrapper uses gradient border: border:1px solid transparent + background:linear-gradient(deep,deep) padding-box, spectrum-gradient border-box. Visible spectrum frame without background fill.</p></div>
+    <div class="rule-block locked"><h4>5 — Reveal Animation</h4><p>IntersectionObserver adds .visible class to .reveal elements. opacity:0 + translateY(30px) → opacity:1 + translateY(0) on enter. Stagger: .reveal-d1/d2/d3/d4 (transition-delay .1s/.2s/.3s/.4s). Apply will-change: transform, opacity to all .reveal elements.</p></div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 06.5 DESIGN SYSTEM -->
+<div class="page" id="section-06-5">
+  <div class="page-label"><span class="n">06.5</span> Design System</div>
+  <h2>System Rules</h2>
+  <p class="page-intro">The structural layer beneath the visual layer. These rules ensure consistency across all touchpoints without requiring custom decisions each time.</p>
+  <div class="sys-grid">
+    <div class="sys-card">
+      <div class="sys-card-label">Layout approach</div>
+      <h4>Grid &amp; Spacing</h4>
+      <p>80px desktop margins. 8px base grid. 1200px max-width. border-radius: 2px throughout — not 4px, not 8px. Asymmetric layouts preferred over centred symmetry. Warmth over formality.</p>
+    </div>
+    <div class="sys-card">
+      <div class="sys-card-label">Border &amp; line style</div>
+      <h4>Subtle Edges</h4>
+      <p>1px solid rgba(255,255,255,.07) on dark surfaces. 1px solid rgba(0,0,0,.08) on light surfaces. Never solid white or black borders. No drop shadows — depth handled by layered backgrounds only.</p>
+    </div>
+    <div class="sys-card">
+      <div class="sys-card-label">Texture &amp; grain</div>
+      <h4>Optional Noise</h4>
+      <p>Optional 2–4% noise texture overlay on dark sections only. No gradients except the 7-colour spectrum system. Scribble layer: ghosted Instrument Serif italic word at opacity .035, 180–220px, dark sections only.</p>
+    </div>
+    <div class="sys-card">
+      <div class="sys-card-label">Motion notes</div>
+      <h4>Light, Not Bounce</h4>
+      <p>Fade-in 400ms ease. Stagger 50ms per beam element. No bounce, spring, or overshooting easing. Motion should feel like light changing — gradual, atmospheric, never mechanical.</p>
+    </div>
+  </div>
+  <div style="margin-top:32px">
+    <div style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:12px">Signature element — Refraction Bars</div>
+    <div class="ref-bars">
+      <div class="ref-bar" style="background:#e84545;width:68px"></div>
+      <div class="ref-bar" style="background:#f5a623;width:56px"></div>
+      <div class="ref-bar" style="background:#f7dc6f;width:46px"></div>
+      <div class="ref-bar" style="background:#52be80;width:36px"></div>
+      <div class="ref-bar" style="background:#48c9b0;width:26px"></div>
+      <div class="ref-bar" style="background:#2db5e8;width:18px"></div>
+      <div class="ref-bar" style="background:#af7ac5;width:12px"></div>
+    </div>
+    <p style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-ghost);margin-top:8px;max-width:none">7 staggered bars · spectrum order · decreasing width · hero, section transitions, footers</p>
+  </div>
+  <div style="margin-top:24px">
+    <div style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:12px">Scribble layer demo</div>
+    <div class="scribble-demo">
+      <div class="scribble-word">wine</div>
+      <p style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);position:relative;z-index:1;max-width:none">Instrument Serif italic · opacity .035 · 180–220px · dark sections only · not on light pages</p>
+    </div>
+  </div>
+  <div class="rule-block" style="margin-top:20px">
+    <h4>Refraction bar placement rules</h4>
+    <p>1. Hero sections — as the prism light-scatter signature element at base or side. 2. Section transitions between dark pages — not between light sections. 3. Special emphasis — footers, covers, closing statements. Do not use as repeating decorative pattern throughout body content.</p>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 07 VOICE & MESSAGING -->
+<div class="page" id="section-07">
+  <div class="page-label"><span class="n">07</span> Voice &amp; Messaging</div>
+  <h2>Tone of Voice</h2>
+  <div class="two-col">
+    <div>
+      <div class="rule-block"><h4>Anti-snob, not anti-expert</h4><p>Disarms pretension. Does not dismiss knowledge — rejects gatekeeping. Warm, curious, slightly irreverent, never smug.</p></div>
+      <div class="rule-block"><h4>Community-first language</h4><p>Lead with people, not product. "The room", "The Regulars", "weird people" — these are the story. Wine is the vehicle, belonging is the product.</p></div>
+      <div class="rule-block locked"><h4>Manifesto close</h4><p>NO SNOBS · NO SPIT BUCKETS · NO SOMMELIER COURSE REQUIRED · JUST GOOD WINE &amp; WEIRD PEOPLE · LOVE, WINE WANKERS xx</p></div>
+      <div class="rule-block"><h4>Copy nuggets</h4><p>good wine for people who actually drink it · come for the wine, stay for the people · no prior knowledge required · 18 seats, always sells out · bring someone weird · wine belongs in a glass, not on a pedestal</p></div>
+    </div>
+    <div>
+      <div class="dd" style="display:block">
+        <div class="do" style="margin-bottom:12px">
+          <div class="do-lbl">Do say</div>
+          <p>good wine for people who actually drink it · come for the wine, stay for the people · no prior knowledge required · 18 seats, always sells out · bring someone weird · self-deprecating humour · short sentences · lead with people and energy not product · irreverence that signals confidence · "come drink good wine with us"</p>
+        </div>
+        <div class="dont">
+          <div class="dont-lbl">Don't say</div>
+          <p>curated selection · artisanal experience · premium wine community · exclusive access · sophisticated palate · terroir-forward · natural winemaking philosophy · immersive tasting journey · "we're passionate about..." · pét-nat / orange wine jargon in headlines · anything implying wine knowledge required · corporate warmth · wellness framing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 08 LOGO USAGE -->
+<div class="page" id="section-08">
+  <div class="page-label"><span class="n">08</span> Logo Usage</div>
+  <h2>Logo Treatment</h2>
+  <div class="rule-block locked"><h4>Always use the PNG asset</h4><p>logo.png is the primary logo. Use it in the hero. Never replace with styled text, CSS-generated text, or icon systems. Must feel familiar to Nick.</p></div>
+  <div class="rule-block locked"><h4>Hero placement</h4><p>Centered. max-width:560px. width:100%. Below the positioning kicker, above the hero title. Dominant and memorable — the emotional anchor of the hero.</p></div>
+  <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
+    <div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost);margin-bottom:4px">Logo colour #e040a0 in context</div>
+    <div style="background:var(--warm);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);border-radius:2px">
+      <span style="font-family:'Crushky','Instrument Serif',Georgia,serif;font-style:italic;font-size:20px;color:#e040a0">Wine Wankers</span>
+      <span style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost)">Nav brand mark</span>
+    </div>
+    <div style="background:var(--warm);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);border-radius:2px">
+      <span style="font-family:var(--fd);font-style:italic;font-size:17px;color:var(--txt-primary)">Wine <span style="color:#e040a0">Wankers</span></span>
+      <span style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-ghost)">Footer text mark</span>
+    </div>
+    <div style="background:rgba(224,64,160,.08);padding:14px 24px;border:1px solid rgba(224,64,160,.2);border-radius:2px;display:flex;align-items:center;gap:10px">
+      <div style="width:12px;height:12px;border-radius:50%;background:#e040a0;flex-shrink:0"></div>
+      <span style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)">#e040a0 — logo, nav brand, footer mark only. Not dominant fill. Not spectrum sequence.</span>
+    </div>
+  </div>
+  <div class="dd" style="margin-top:16px">
+    <div class="do"><div class="do-lbl">Correct</div><p>PNG logo in hero, full size, centered. Logo pink (#e040a0) as text mark in nav and footer where logo would be too large.</p></div>
+    <div class="dont"><div class="dont-lbl">Incorrect</div><p>Replacing logo.png with CSS text. Scaling below recognisable size. Adding glow or drop-shadow effects to the logo. Omitting from hero.</p></div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 09 LAYOUT & DENSITY -->
+<div class="page" id="section-09">
+  <div class="page-label"><span class="n">09</span> Layout &amp; Density</div>
+  <h2>Layout Principles</h2>
+  <div class="two-col">
+    <div>
+      <div class="rule-block"><h4>High density, not generous whitespace</h4><p>Tight padding signals difference from minimalist competitors. The page should feel like a packed bar — warm, full, alive.</p></div>
+      <div class="rule-block locked"><h4>Smooth scroll — no snap</h4><p>html{scroll-behavior:smooth} only. No scroll-snap-type anywhere. The wine fridge uses overflow-x:auto without snap alignment. Sections flow fluidly.</p></div>
+      <div class="rule-block"><h4>Section flow — vertical narrative</h4><p>No viewport-height locking. Padding-based sizing. Sections read naturally on scroll. Each section is a chapter in the brand story.</p></div>
+    </div>
+    <div>
+      <div class="rule-block"><h4>Spectrum strips as section dividers</h4><p>Thin (2px, opacity .32) rainbow gradient lines breathe between sections. Decorative, not structural.</p></div>
+      <div class="rule-block"><h4>Content width</h4><p>max-width approx 1200px, centered. Padding: clamp(20px,4vw,48px). Sections use consistent horizontal rhythm.</p></div>
+      <div class="rule-block"><h4>Mobile-first responsive</h4><p>All sections readable and usable on mobile. Grid layouts collapse at 768px. Masonry: 3 cols → 2 cols at 768px → 1 col at 480px.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 10 LANDING PAGE HERO MOCKUP — LIGHT -->
+<div class="page light" id="section-10">
+  <div class="page-label"><span class="n">10</span> Landing Page Hero Mockup</div>
+  <h2>The Spec in Context</h2>
+  <p class="page-intro" style="color:rgba(14,14,14,.62)">Full landing page spec applied. Shows how the hero hierarchy, type system, and interaction patterns come together at winewankers.com.au.</p>
+  <div style="margin-top:24px;max-width:860px">
+    <div class="browser-chrome">
+      <div class="browser-dots">
+        <div class="browser-dot" style="background:#e84545"></div>
+        <div class="browser-dot" style="background:#f5a623"></div>
+        <div class="browser-dot" style="background:#52be80"></div>
+      </div>
+      <div class="browser-url">winewankers.com.au</div>
+    </div>
+    <div class="hero-mockup-panel">
+      <div class="lp-beams">
+        <div class="lp-beam" style="background:#e84545"></div>
+        <div class="lp-beam" style="background:#f5a623"></div>
+        <div class="lp-beam" style="background:#f7dc6f"></div>
+        <div class="lp-beam" style="background:#52be80"></div>
+        <div class="lp-beam" style="background:#48c9b0"></div>
+        <div class="lp-beam" style="background:#2db5e8"></div>
+        <div class="lp-beam" style="background:#af7ac5"></div>
+      </div>
+      <div class="lp-nav">
+        <div class="lp-nav-brand">Wine Wankers</div>
+        <div class="lp-nav-links">
+          <div class="lp-nav-link">Events</div>
+          <div class="lp-nav-link">Wines</div>
+          <div class="lp-nav-link">About</div>
+        </div>
+        <div class="lp-nav-cta">Join the List</div>
+      </div>
+      <div class="lp-hero-content">
+        <div class="lp-tagline">Australia's Natural Wine Community</div>
+        <div class="lp-h1 hero-title">good wine.<br><span class="rainbow-stack">weird</span> people.</div>
+        <div class="lp-support">Monthly tastings in West End. No wine knowledge required. Just curiosity and a proper drink.</div>
+        <div class="lp-email-row">
+          <div class="lp-email-input">your@email.com</div>
+          <div class="lp-email-btn">Join the List</div>
+        </div>
+        <div class="lp-next">Next tasting →</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:20px">
+    <div class="rule-block" style="background:rgba(0,0,0,.03);border-color:rgba(0,0,0,.08)">
+      <h4 style="color:var(--deep)">Implementation notes</h4>
+      <p style="color:rgba(14,14,14,.62)">Nav brand: Crushky serif at #e040a0 (falls back to Instrument Serif italic if font unavailable). Hero H1: Syne 800, lowercase. Only "weird" receives rainbow-stack via .hero-title span.rainbow-stack selector. 7 refraction beams positioned as left-edge absolute element, full height. Email input + CTA on one row. Glow button: yellow at rest, rainbow border on hover.</p>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 11 INSTAGRAM CONCEPTS -->
+<div class="page" id="section-11">
+  <div class="page-label"><span class="n">11</span> Instagram Concepts</div>
+  <h2>Brand in Social Context</h2>
+  <p class="page-intro">Pure CSS social mockups — no external assets required. Shows how the Spectrum system applies to Instagram content formats.</p>
+  <div class="ig-grid">
+    <div class="ig-post" style="background:linear-gradient(135deg,#0e0e0e 0%,#1a1a1f 60%,#252528 100%);border:1px solid var(--border)">
+      <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#e84545,#f5a623,#f7dc6f,#52be80,#48c9b0,#2db5e8,#af7ac5)"></div>
+      <div style="position:absolute;top:10px;left:14px;font-family:'Crushky','Instrument Serif',Georgia,serif;font-style:italic;font-size:13px;color:var(--pink);z-index:2">Wine Wankers</div>
+      <div class="ig-annotation">this one's gonna be wild</div>
+      <div class="ig-label">West End, Brisbane</div>
+      <div class="ig-title">Wine Wankers<br>March</div>
+      <div class="ig-meta">Saturday 22 March · 7pm · The End Bar · 18 seats</div>
+    </div>
+    <div class="ig-post" style="background:var(--card);border:1px solid var(--border)">
+      <div style="position:absolute;top:20px;left:50%;transform:translateX(-50%);width:28px;height:76px;background:var(--warm);border-radius:3px 3px 2px 2px;border:1px solid rgba(255,255,255,.1)"></div>
+      <div style="position:absolute;top:10px;left:14px;font-family:'Crushky','Instrument Serif',Georgia,serif;font-style:italic;font-size:11px;color:var(--pink);z-index:2">Chasing Rainbows</div>
+      <div class="ig-badge">3 Left</div>
+      <div class="ig-label">Natural pick · March 2026</div>
+      <div class="ig-title" style="font-size:18px;font-family:var(--fd);font-style:italic">Shobbrook<br>'Giallo' 2022</div>
+      <div class="ig-meta">Skin Contact · Orange · Adelaide Hills</div>
+    </div>
+    <div class="ig-post" style="background:#0e0e0e;border:1px solid var(--border)">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:16px;gap:5px">
+        <div style="height:5px;border-radius:2px;background:#e84545;width:80%;opacity:.6"></div>
+        <div style="height:5px;border-radius:2px;background:#f5a623;width:60%;opacity:.6"></div>
+        <div style="height:5px;border-radius:2px;background:#f7dc6f;width:88%;opacity:.6"></div>
+        <div style="height:5px;border-radius:2px;background:#52be80;width:50%;opacity:.6"></div>
+        <div style="height:5px;border-radius:2px;background:#48c9b0;width:72%;opacity:.6"></div>
+      </div>
+      <div style="font-family:var(--display);font-weight:800;font-size:36px;line-height:1;color:var(--cream);position:relative;z-index:1">550+</div>
+      <div style="font-family:var(--fb);font-style:italic;font-size:13px;color:var(--txt-dim);position:relative;z-index:1">Members and counting</div>
+      <div class="ig-meta">join the anti-pretentious pour club</div>
+    </div>
+  </div>
+  <div class="ig-divider">
+    <div class="ig-divider-line"></div>
+    <div class="ig-divider-icon">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 2 C11 2 6 6 6 11 C6 13.76 8.24 16 11 16 C13.76 16 16 13.76 16 11 C16 6 11 2 11 2Z" stroke="currentColor" stroke-width="1" fill="none"/>
+        <line x1="11" y1="16" x2="11" y2="20" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="20" x2="14" y2="20" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="ig-divider-line"></div>
+  </div>
+  <div class="ig-manifesto">
+    <div class="ig-manifesto-label">Brand Truth</div>
+    <div class="ig-manifesto-line">The anti-wine-club wine club.</div>
+    <p>We exist for people who are curious enough to show up, not qualified enough to pass a tasting exam. No prior knowledge required. No sommelier course necessary. Just good wine, weird people, and a room that feels like yours.</p>
+    <p>18 seats. Always sells out. West End, Brisbane.</p>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 12 BRAND SCALING -->
+<div class="page" id="section-12">
+  <div class="page-label"><span class="n">12</span> Brand Scaling</div>
+  <h2>The Brand Ecosystem</h2>
+  <p class="page-intro">Three entities in the Wine Wankers universe. Each has a defined visual and verbal relationship to the parent brand.</p>
+  <div class="scaling-grid">
+    <div class="scaling-card">
+      <div class="scaling-card-label">Primary brand</div>
+      <h3>Wine Wankers</h3>
+      <p>Full Spectrum direction. Dark backgrounds as primary environment. Refraction bars as signature element. Yellow CTA. Rainbow stack on "weird". Community-first, events-primary. Built to outgrow any single venue — the brand travels with the community.</p>
+      <div style="margin-top:16px;height:3px;background:linear-gradient(90deg,#e84545,#f5a623,#f7dc6f,#52be80,#48c9b0,#2db5e8,#af7ac5);border-radius:2px;opacity:.8"></div>
+    </div>
+    <div class="scaling-card">
+      <div class="scaling-card-label">Online store</div>
+      <h3>Chasing Rainbows Wine Co.</h3>
+      <p>Light mode for e-commerce. Aged Paper background (#f7f4ee). Wine Stain accents (#6b1a2a). Spectrum gradient strip as the connection to Wine Wankers. Same typography system — Syne, Instrument Serif, Newsreader, JetBrains Mono.</p>
+      <div style="margin-top:16px;height:3px;background:linear-gradient(90deg,#6b1a2a,#e040a0,#f5a623);border-radius:2px;opacity:.8"></div>
+    </div>
+    <div class="scaling-card">
+      <div class="scaling-card-label">Host venue</div>
+      <h3>The End Bar</h3>
+      <p>Its own distinct visual identity — not a Wine Wankers sub-brand. Co-branded lockup only when hosting WW events. Refraction bars used as the "Presented by Wine Wankers" element. The End's identity remains independent and sovereign.</p>
+      <div style="margin-top:16px;height:3px;background:linear-gradient(90deg,rgba(247,244,238,.12),rgba(247,244,238,.32));border-radius:2px"></div>
+    </div>
+  </div>
+</div>
+
+<div class="ss thin"></div>
+
+<!-- 13 COMMUNITY ENGINE -->
+<div class="page" id="section-13">
+  <div class="page-label"><span class="n">13</span> Community Engine</div>
+  <h2>How the Movement Compounds</h2>
+  <div class="founder-quote">
+    <blockquote>"The club is about 60% community and 40% wine. People keep coming back because of who they meet, not what they drink."</blockquote>
+    <cite>— Nick Goding, Founder · March 2026</cite>
+  </div>
+  <p class="page-intro">The community engine is self-reinforcing. Each layer feeds the next. Events build community. Community drives subscriptions. Subscriptions fund events. The brand doesn't need to grow by spending more — it grows by making the existing community more visible to people who want to join it.</p>
+  <div class="eco-layout">
+    <div class="eco-layer">
+      <div class="eco-layer-label">Operating now</div>
+      <div class="eco-nodes">
+        <div class="eco-node primary">Brand / Movement — Spectrum visual identity, anti-pretentious positioning</div>
+        <div class="eco-node">Monthly Events — 18 seats, The End Bar, West End</div>
+        <div class="eco-node">Chasing Rainbows Wine Co. — Online wine store, 550+ warm contacts</div>
+        <div class="eco-node">The End Bar — Host venue, co-branded events</div>
+      </div>
+    </div>
+    <div class="eco-layer">
+      <div class="eco-layer-label">Growth layer</div>
+      <div class="eco-nodes">
+        <div class="eco-node">Content — Email newsletter + social UGC engine</div>
+        <div class="eco-node">Loyalty — Member reward tiers (Show Up → Evangelist)</div>
+        <div class="eco-node">Merch — Wearable distribution channel, membership signal</div>
+        <div class="eco-node">Venues — Beyond The End, interstate events, pop-up tastings</div>
+      </div>
+    </div>
+  </div>
+  <div class="eco-closing">Community → events → wine. Not the other way around.</div>
+</div>
+
+<div style="padding:32px clamp(24px,4vw,60px) 0;display:flex;justify-content:flex-start">
+  <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+    <div style="height:3px;border-radius:2px;background:var(--pink);width:12px"></div>
+    <div style="height:3px;border-radius:2px;background:var(--sv);width:18px"></div>
+    <div style="height:3px;border-radius:2px;background:var(--sb);width:24px"></div>
+    <div style="height:3px;border-radius:2px;background:var(--st);width:30px"></div>
+    <div style="height:3px;border-radius:2px;background:var(--sg);width:38px"></div>
+    <div style="height:3px;border-radius:2px;background:var(--sy);width:46px"></div>
+    <div style="height:3px;border-radius:2px;background:var(--so);width:54px"></div>
+    <div style="height:3px;border-radius:2px;background:var(--sr);width:62px"></div>
+  </div>
+</div>
+
+<footer>
+  <p>Wine Wankers Brand Style Guide · FINAL · March 2026</p>
+  <p>Produced by Coupeco · coupeco.tech</p>
+</footer>
+<div class="ss"></div>
+
+</body>
+</html>

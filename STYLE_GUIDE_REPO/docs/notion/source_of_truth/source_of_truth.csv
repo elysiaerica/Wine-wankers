@@ -1,0 +1,1086 @@
+﻿Section ID,screenshot layout reference,screenshot style reference,Final Section Name,Style Reference,Layout Source Reference,Required Edits,SECTION COPY - COMPLETE,LAYOUT CODE REF,STYLE CODE REF,css
+00,image.png,image%201.png,COVER PAGE,style_guide_v11_patched.html,style_guide_v11.html,Rainbow stack on ‘SPECTRUM’ + add rainbow bar motif in bottom left corner - keep ‘WINE WANKERS’ in crushky brush pink,"Brand Direction
+WINE WANKERS
+Spectrum
+The anti-pretentious pour club — visual & verbal system
+Version FINAL · March 2026
+Producer Coupe Co
+.Status Production-ready","<section id=""section-00"" class=""cover"">
+
+<div class=""cover-prism""></div>
+
+<div class=""cover-bars"">
+<div class=""rm-bar r""></div>
+<div class=""rm-bar o""></div>
+<div class=""rm-bar y""></div>
+<div class=""rm-bar g""></div>
+<div class=""rm-bar t""></div>
+<div class=""rm-bar b""></div>
+<div class=""rm-bar v""></div>
+</div>
+
+<div class=""cover-inner"">
+
+<div class=""cover-tag"">
+Brand Direction
+</div>
+
+<!-- LOGO -->
+<div class=""cover-logo"">
+<!-- logo.png goes here -->
+</div>
+
+<!-- SPECTRUM TITLE -->
+<div class=""cover-spectrum-word"">
+Spectrum
+</div>
+
+
+<!-- SUBTEXT -->
+<p class=""cover-sub"">
+The anti-pretentious pour club
+</p>
+
+<!-- META -->
+<div class=""cover-meta"">
+
+<div>
+<div class=""cm-label"">Version</div>
+<div class=""cm-val"">FINAL · March 2026</div>
+</div>
+
+<div>
+<div class=""cm-label"">Producer</div>
+<div class=""cm-val"">Coupe Co</div>
+</div>
+
+<div>
+<div class=""cm-label"">Status</div>
+<div class=""cm-val"">Production-ready</div>
+</div>
+
+</div>
+
+</div>
+
+</section>",".cover{
+min-height:88vh;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:clamp(60px,10vw,100px) clamp(24px,4vw,60px);
+position:relative;
+overflow:hidden;
+}
+
+.cover-prism{
+position:absolute;
+top:0;
+right:0;
+width:60%;
+height:100%;
+z-index:0;
+}
+
+.prism-glow{ /* main gradient / }
+.prism-glow-hot{ / highlight layer / }
+.prism-wine{ / base tone */ }
+
+.cover-inner{
+position:relative;
+z-index:1;
+max-width:820px;
+}
+
+.cover-bars{
+position:absolute;
+bottom:clamp(28px,4vw,48px);
+left:clamp(24px,4vw,60px);
+display:flex;
+flex-direction:column;
+gap:4px;
+}
+
+.cover-spectrum-word{
+font-size:clamp(56px,9vw,120px);
+line-height:.88;
+}","<section id=""section-00"" class=""cover"">
+
+<div class=""cover-prism"" aria-hidden=""true"">
+<div class=""prism-glow""></div>
+<div class=""prism-glow-hot""></div>
+<div class=""prism-wine""></div>
+</div>
+
+<div class=""cover-motif"" aria-hidden=""true"">
+<div class=""rm-bar r""></div>
+<div class=""rm-bar o""></div>
+<div class=""rm-bar y""></div>
+<div class=""rm-bar g""></div>
+<div class=""rm-bar t""></div>
+<div class=""rm-bar b""></div>
+<div class=""rm-bar v""></div>
+</div>
+
+<div class=""cover-inner"">
+
+<div class=""cover-tag-row"">
+<span class=""cover-tag-line""></span>
+<div class=""cover-tag"">Brand Direction</div>
+<span class=""cover-tag-line""></span>
+</div>
+
+<div class=""cover-brand-name"">Wine Wankers</div>
+
+<h1 class=""cover-spectrum-word rainbow-stack"">Spectrum</h1>
+
+<h2 class=""cover-sub"">The anti-pretentious pour club</h2>
+
+<div class=""cover-meta"">
+<div class=""cover-meta-item"">
+<div class=""cm-label"">Version</div>
+<div class=""cm-val"">FINAL · March 2026</div>
+</div>
+
+<div class=""cover-meta-item"">
+<div class=""cm-label"">Producer</div>
+<div class=""cm-val"">Coupe Co</div>
+</div>
+
+<div class=""cover-meta-item"">
+<div class=""cm-label"">Status</div>
+<div class=""cm-val"">Production-ready</div>
+</div>
+</div>
+
+<div class=""cover-scribble"" aria-hidden=""true"">wine</div>
+
+</div>
+
+</section>"
+01,image%202.png,image%203.png,STRATEGIC RATIONALE,style_guide_v10.html,style_guide_v10.html,,"01. Strategic RationaleWhy Spectrum Won
+Territory A — Rejected
+Suits, Hipsters, Everyone
+Eclectic, inclusive, broad direction. Strong execution risk — without a visual signature, the brand reads as another generic wine subscription. No ownable territory, no community signal.
+
+Territory B — Selected ✓
+The Rainbow Direction
+Makes Nick's existing rainbow identity ownable and intelligent. Executed as optical science — refraction bars, prismatic light, chromatic displacement on ""weird"". The spectrum reads as pride, science, and counterculture simultaneously without being literal. This is the brand.
+
+Territory C — Rejected
+Natty Wine Eclectic
+Hand-drawn, lo-fi, zine aesthetic. Better suited for Chasing Rainbows Wine Co. as a standalone retail brand. Lacks the visual authority and scalability needed for Wine Wankers as a community platform.
+
+Why Spectrum Works
+The Spectrum direction transforms a rainbow — already part of Nick's existing visual language — into an optical phenomenon. Refraction bars as the brand signature. Chromatic displacement on ""weird"" as the hero typographic effect. Dark backgrounds as the premium canvas. The system reads as a distinct, ownable visual identity that no competitor in the natural wine space has claimed.","<section id=""section-01"" class=""page"">
+
+<div class=""page-label"">
+<span class=""n"">01</span> Strategic Rationale
+</div>
+
+<h2>Why Spectrum Won</h2>
+
+<p class=""page-intro"">
+Three viable territories were evaluated...
+</p>
+
+<div class=""territory-grid"">
+
+<div class=""territory-card"">
+<div class=""territory-badge"">Rejected</div>
+<h4>Suits, Hipsters, Everyone</h4>
+<p>Eclectic, inclusive...</p>
+</div>
+
+<div class=""territory-card selected"">
+<div class=""territory-badge"">Selected</div>
+<h4>The Rainbow Direction</h4>
+<p>Makes Nick's identity ownable...</p>
+</div>
+
+<div class=""territory-card"">
+<div class=""territory-badge"">Rejected</div>
+<h4>Natty Wine Eclectic</h4>
+<p>Hand-drawn aesthetic...</p>
+</div>
+
+</div>
+
+</section>","<section id=""section-01"" class=""page"">
+
+<div class=""page-label"">
+<span class=""n"">01</span> Strategic Rationale
+</div>
+
+<h2>Why Spectrum Won</h2>
+
+<p class=""page-intro"">
+Three viable territories were evaluated...
+</p>
+
+<div class=""territory-grid"">
+
+<div class=""territory-card"">
+<div class=""territory-badge"">Rejected</div>
+<h4>Suits, Hipsters, Everyone</h4>
+<p>Eclectic, inclusive...</p>
+</div>
+
+<div class=""territory-card selected"">
+<div class=""territory-badge"">Selected</div>
+<h4>The Rainbow Direction</h4>
+<p>Makes Nick's identity ownable...</p>
+</div>
+
+<div class=""territory-card"">
+<div class=""territory-badge"">Rejected</div>
+<h4>Natty Wine Eclectic</h4>
+<p>Hand-drawn aesthetic...</p>
+</div>
+
+</div>
+
+</section>",".territory-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:2px;
+}
+
+@media(max-width:768px){
+.territory-grid{
+grid-template-columns:1fr;
+}
+}
+
+.territory-card{
+padding:24px;
+}
+
+.territory-card.selected{
+outline:2px solid rgba(247,220,111,.14);
+}"
+02,image%204.png,image%205.png,BRAND POSITIONING,style_guide_v11.html,style_guide_v11.html,,"02. Brand Positioning
+The Anti-Pretentious Pour Club
+Core statement
+The anti-pretentious pour club.
+Community-first, anti-gatekeeping, welcoming to people who like wine but hate wine culture performance.
+
+Hero line (locked)
+good wine. weird people.
+""good wine."" is plain cream. Only ""weird"" carries the rainbow stack effect. Both lowercase.
+
+Support line (locked)
+""sick of wine snobs, spit buckets and sommeliers?""
+Italic. Lowercase. One sentence that disarms wine-culture gatekeepers before they arrive.
+
+Wine Wankers occupies the unclaimed centre: LGBTQ+ community × Natural wine culture × Local IRL events. No competitor holds this intersection.
+
+Primary CTA (locked)
+JOIN THE GANG — all caps, JetBrains Mono, glow button (rainbow activates on hover only, calm at rest)
+
+Manifesto close
+NO SNOBS · NO SPIT BUCKETS · NO SOMMELIER COURSE REQUIRED · JUST GOOD WINE & WEIRD PEOPLE · LOVE, WINE WANKERS xx
+
+Optional copy nuggets
+good wine for people who actually drink it · wine belongs in a glass, not on a pedestal · because life's too short for bad wine and boring people","<div class=""page"" id=""section-01"">
+
+<div class=""page-label"">
+<span class=""n"">01</span> Brand Positioning
+</div>
+
+<h2>The Anti-Pretentious Pour Club</h2>
+
+<div class=""two-col"">
+
+<div>
+
+<div class=""card"">
+<div class=""card-accent""
+style=""background:linear-gradient(90deg,var(--sr),var(--so),var(--sy))"">
+</div>
+
+<div class=""card-lbl"">Core statement</div>
+<h3>The anti-pretentious pour club.</h3>
+
+<p>
+Community-first, anti-gatekeeping, welcoming to people who like wine
+but hate wine culture performance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>","<div class=""page"" id=""section-01"">
+
+<div class=""page-label"">
+<span class=""n"">01</span> Brand Positioning
+</div>
+
+<h2>The Anti-Pretentious Pour Club</h2>
+
+<div class=""two-col"">
+
+<div>
+
+<div class=""card"">
+<div class=""card-accent""
+style=""background:linear-gradient(90deg,var(--sr),var(--so),var(--sy))"">
+</div>
+
+<div class=""card-lbl"">Core statement</div>
+<h3>The anti-pretentious pour club.</h3>
+
+<p>
+Community-first, anti-gatekeeping, welcoming to people who like wine
+but hate wine culture performance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>",
+03,image%206.png,image%207.png,COLOUR HIERARCHY,style_guide_v10.html,style_guide_v10.html,update palette to reflect copy,"03. Colour Hierarchy
+The spectrum, anchored.
+
+Two distinct applications: the primary dark system for Wine Wankers, and the light sibling for Chasing Rainbows Wine Store. Both share the same prismatic DNA.Note: Wine Wankers allowed sporadic implementation of the Light system to diversify + add warmth.
+
+PRIMARY SYSTEM —
+Wine Wankers — Background
+Deep Glass
+#1A1A1F
+Warm Black
+#252528
+Aged Paper
+#FFFEF9Soft Cream
+#F7F4EE
+
+Accent & Contrast —Wine Stain
+#6B1A2A
+Logo Pink
+#E040A0
+Accent Yellow
+#F7DC6F
+
+PRISMATIC SPECTRUM —
+Red
+#E84545
+Orange
+#F5A623
+Yellow
+#F7DC6F
+Green
+#52BE80
+Teal
+#48C9B0
+Cyan
+#2DB5E8
+Violet
+#AF7AC5
+
+Spectrum usage
+Rainbow and spectrum colours are movement and interaction signals only.
+
+Logo pink #e040a0
+Used for the logo PNG. Nav brand mark. Footer brand text. Sometimes accent word/s. Not used as a dominant background fill.
+
+Yellow #f7dc6f
+Primary CTA background. Active event price display. Section label numbers. Most functional of the spectrum colours.
+
+—
+
+Role & Weight
+Primary environment
+Deep Glass
+The floor every other colour sits on. Dominant on dark pages.
+
+Energy / movement
+Spectrum beams
+Hero sections, transitions, special moments only. Not wallpaper.
+
+Action
+Spectrum Yellow
+CTAs, key highlights, links. One signal. Don't dilute it.
+Human warmth
+
+Soft Cream + Wine Stain
+Light Feature sectionsAged Paper + Warm Blacktext + light sections
+","<section id=""section-03"" class=""page"">
+
+<div class=""page-label"">
+<span class=""n"">03</span> Colour Hierarchy
+</div>
+
+<h2>The spectrum, anchored.</h2>
+
+<p class=""page-intro"">
+Two distinct applications...
+</p>
+
+<table class=""col-table"">
+<tr>
+<th>Colour</th>
+<th>Usage</th>
+</tr>
+<tr>
+<td>Deep Glass</td>
+<td>Primary background</td>
+</tr>
+</table>
+
+</section>","<section id=""section-03"" class=""page"">
+
+<div class=""page-label"">
+<span class=""n"">03</span> Colour Hierarchy
+</div>
+
+<h2>The spectrum, anchored.</h2>
+
+<p class=""page-intro"">
+Two distinct applications...
+</p>
+
+<table class=""col-table"">
+<tr>
+<th>Colour</th>
+<th>Usage</th>
+</tr>
+<tr>
+<td>Deep Glass</td>
+<td>Primary background</td>
+</tr>
+</table>
+
+</section>",
+04,image%208.png,image%209.png,TYPOGRAPHY,style_guide_v10.html,style_guide_v10.html,syne all lowercase,"04. Typography
+Typography, defined
+Hero display — Syne ExtraBold 800
+Used for hero title and key statement lines. Lowercase. Tight tracking -0.02em. Line-height 0.9.
+Section headings — Instrument Serif
+Used for section h2/h3 headings throughout page body. Often italic. Gives warm editorial quality to section titles.
+
+Body copy — Newsreader
+Serif, editorial, warm. Paragraphs, descriptions, support copy. Italic variant for quotes, support lines, and emphasis.
+
+UI / labels — JetBrains Mono
+All uppercase labels, badges, metadata, nav links, buttons, captions. Monospace, technical feel.
+
+Social Content & Logo Fallback - Crushky — Instagram/physical print graphics & Logo fallback only. Always uppercase and never used for body text, headings, or UI elements.
+
+H1 / Hero
+Syne 800 · clamp(52px,8vw,110px) · lowercase · -0.02em
+H2 / Section
+Instrument Serif · clamp(26px,3.5vw,42px) · often italic
+H3 / Sub
+Instrument Serif · 20–24px · italic
+Body Lg
+Newsreader · 17–18px · line-height 1.75
+Body
+Newsreader · 15–16px · line-height 1.7
+Caption
+Newsreader italic · 13px
+Label / UI
+JetBrains Mono · 10–11px · uppercase · 0.14–0.22em
+Syne 800 — Hero Title
+good wine.
+weird people.
+Instrument Serif Italic — Section Heading
+Shoulder to shoulder.
+The lights are low.
+Newsreader — Body
+Wine Wankers exists for people who are curious enough to show up, not qualified enough to pass a tasting exam.
+JetBrains Mono — Label
+18 seats · always sells out · west end, brisbane
+Crushky — Social & Logo Language Only
+WINE WANKERS
+Instagram social graphics · fall-back logo font
+","<section id=""section-04"" class=""page light"">
+
+<div class=""page-label"">
+<span class=""n"">04</span> Typography
+</div>
+
+<h2>Typography, defined</h2>
+
+<div class=""type-scale"">
+
+<div class=""ts-row"">
+<div class=""ts-label"">H1</div>
+<div class=""ts-val"">Syne 800</div>
+</div>
+
+<div class=""ts-row"">
+<div class=""ts-label"">Body</div>
+<div class=""ts-val"">Newsreader</div>
+</div>
+
+</div>
+
+</section>","<section id=""section-04"" class=""page light"">
+
+<div class=""page-label"">
+<span class=""n"">04</span> Typography
+</div>
+
+<h2>Typography, defined</h2>
+
+<div class=""type-scale"">
+
+<div class=""ts-row"">
+<div class=""ts-label"">H1</div>
+<div class=""ts-val"">Syne 800</div>
+</div>
+
+<div class=""ts-row"">
+<div class=""ts-label"">Body</div>
+<div class=""ts-val"">Newsreader</div>
+</div>
+
+</div>
+
+</section>",
+05,image%2010.png,image%2011.png,LOGO USAGE,style_guide_12.html,style_guide_12.html,,"05. Logo Usage
+Logo Treatment
+Always use the PNG asset
+logo.png is the primary logo. Use it in the hero. Never replace with styled text, CSS-generated text, or icon systems. Must feel familiar to Nick.
+
+Hero placement
+Centered. max-width:560px. width:100%. Below the positioning kicker, above the hero title. Dominant and memorable — the emotional anchor of the hero.
+
+Logo colour #e040a0 in context
+Wine Wankers
+
+Nav brand mark
+Wine Wankers
+
+Footer text mark
+#e040a0 — logo, nav brand, footer mark only. ALWAYS in Crushky for nav/footer where logo.png is missing. Not dominant fill.
+Correct
+PNG logo in hero, full size, centered. Logo pink (#e040a0) as text mark in nav and footer where logo would be too large.
+
+Incorrect
+Scaling below recognisable size. Adding glow or drop-shadow effects to the logo. Omitting from hero.","<div class=""lp-nav"">
+
+<div class=""lp-nav-brand"">
+Wine Wankers
+</div>
+
+<div class=""lp-nav-links"">
+<a class=""lp-nav-link"">Events</a>
+<a class=""lp-nav-link"">Wine</a>
+<a class=""lp-nav-link"">About</a>
+</div>
+
+</div>","HTML: 
+<div class=""lp-nav"">
+
+<div class=""lp-nav-brand"">
+Wine Wankers
+</div>
+
+<div class=""lp-nav-links"">
+<a class=""lp-nav-link"">Events</a>
+<a class=""lp-nav-link"">Wine</a>
+<a class=""lp-nav-link"">About</a>
+</div>
+
+</div>",".lp-nav-brand{
+font-family:'Crushky','Instrument Serif',Georgia,serif;
+font-style:italic;
+font-size:20px;
+color:var(--pink);
+}"
+06,image%2012.png,image%2013.png,DESIGN SIGNATURES,style_guide_12.html,style_guide_12.html,,"06. Design SignaturesRules for developers and designers to maintain consistency without prescribing every element. The signature devices do the heavy lifting.
+
+Layout approach
+Generous margins (80px desktop, 24px mobile). 8px grid baseline. Maximum content width 1200px. Cards use border-radius: 2px or none. Asymmetric layouts preferred — left-anchored content, right-edge spectrum elements.
+
+Border & line style
+Subtle borders at 1px solid rgba(255,255,255,0.07) on dark backgrounds. 1px solid rgba(0,0,0,0.08) on light. No heavy strokes, no drop shadows. Separation through spacing, not boxing.
+
+Texture & grain
+Optional noise overlay at 2–4% opacity on dark sections. No gradients except the spectrum gradient itself. The scribble layer (see below) provides texture in dark contexts without disrupting readability.
+
+Motion notes
+Subtle fade-in on scroll (400ms). Spectrum bars animate in sequence (stagger 50ms per beam). No bounce, no elastic easing. Motion should feel like light changing, not UI reacting.Signature element — Refraction Bars
+7 staggered bars · spectrum order · decreasing width · hero, section transitions, footers
+
+Scribble layer demo
+wine
+Instrument Serif italic · opacity .035 · 180–220px · dark sections only · not on light pages
+
+Refraction bar & beam placement rules
+1. Hero sections — as the prism light-scatter signature element at base or side. 2. Section transitions between dark pages — not between light sections. 3. Special emphasis — footers, covers, closing statements. Do not use as repeating decorative pattern throughout body content.","CSS:
+.sys-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2px;
+background:var(--border);
+margin-top:20px;
+}
+
+.sys-card{
+background:var(--card);
+padding:24px;
+}
+
+.sys-card-label{
+font-family:var(--fm);
+font-size:9px;
+letter-spacing:.15em;
+text-transform:uppercase;
+color:var(--txt-ghost);
+}
+
+.sys-card h4{
+font-family:var(--fd);
+font-style:italic;
+font-size:18px;
+color:var(--cream);
+}
+
+.sys-card p{
+font-family:var(--fb);
+font-size:13px;
+color:var(--txt-dim);
+}","CSS:
+.sys-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2px;
+background:var(--border);
+margin-top:20px;
+}
+
+.sys-card{
+background:var(--card);
+padding:24px;
+}
+
+.sys-card-label{
+font-family:var(--fm);
+font-size:9px;
+letter-spacing:.15em;
+text-transform:uppercase;
+color:var(--txt-ghost);
+}
+
+.sys-card h4{
+font-family:var(--fd);
+font-style:italic;
+font-size:18px;
+color:var(--cream);
+}
+
+.sys-card p{
+font-family:var(--fb);
+font-size:13px;
+color:var(--txt-dim);
+}","CSS:
+.sys-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2px;
+background:var(--border);
+margin-top:20px;
+}
+
+.sys-card{
+background:var(--card);
+padding:24px;
+}
+
+.sys-card-label{
+font-family:var(--fm);
+font-size:9px;
+letter-spacing:.15em;
+text-transform:uppercase;
+color:var(--txt-ghost);
+}
+
+.sys-card h4{
+font-family:var(--fd);
+font-style:italic;
+font-size:18px;
+color:var(--cream);
+}
+
+.sys-card p{
+font-family:var(--fb);
+font-size:13px;
+color:var(--txt-dim);
+}"
+07,image%2014.png,image%2015.png,SOCIAL PRESENCE,style_guide_v10.html,style_guide_12.html,,"07. Social Presence
+Social presence.
+Three post types demonstrating the system's flexibility. Event announcements, product features, and community moments — each with its own treatment, all unmistakably the same brand.
+
+Next Tasting
+Wine Wankers
+March
+this one's gonna be wild
+SAT 22
+6PM · The End Bar · 18 Seats
+
+Shobbrook 'Giallo'
+2022
+Skin Contact · Orange · Adelaide Hills
+Perfect for a summer afternoon. Only three bottles left.
+3 Left
+
+550+
+Members and counting
+""Look at all these happy faces.""
+
+Brand Truth
+The anti-wine-club wine club.
+We exist for people who are curious enough to show up, not qualified enough to pass a tasting exam. No prior knowledge required. No sommelier course necessary. Just good wine, weird people, and a room that feels like yours.
+
+18 seats. Always sells out. West End, Brisbane.
+Just good wine, people who want to drink it, and a community that grows because showing up feels better than not showing up.
+",".ig-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+
+.ig-post{
+aspect-ratio:1;
+border-radius:4px;
+overflow:hidden;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:16px;
+}",".ig-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:24px;
+}
+
+@media(max-width:768px){
+.ig-grid{
+grid-template-columns:1fr;
+}
+}
+
+.ig-post{
+aspect-ratio:1;
+border-radius:4px;
+overflow:hidden;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:16px;
+}
+
+.ig-label{
+font-size:8px;
+letter-spacing:.14em;
+text-transform:uppercase;
+margin-bottom:4px;
+}
+
+.ig-title{
+font-size:26px;
+line-height:.95;
+}
+
+.ig-meta{
+font-size:8px;
+letter-spacing:.08em;
+text-transform:uppercase;
+margin-top:6px;
+}
+
+.ig-manifesto{
+margin-top:24px;
+padding:28px;
+border-radius:2px;
+}
+
+.ig-manifesto-line{
+font-size:clamp(18px,2.5vw,28px);
+line-height:1.2;
+}",
+08,image%2016.png,image%2017.png,VOICE & MESSAGING,style_guide_v11.html,style_guide_12.html,,"08. Voice & Messaging
+Tone of Voice
+Anti-snob, not anti-expert
+Disarms pretension. Does not dismiss knowledge — rejects gatekeeping. Warm, curious, slightly irreverent, never smug.
+
+Community-first language
+Lead with people, not product. ""The room"", ""The Regulars"", ""weird people"" — these are the story. Wine is the vehicle, belonging is the product.
+
+Manifesto close
+NO SNOBS · NO SPIT BUCKETS · NO SOMMELIER COURSE REQUIRED · JUST GOOD WINE & WEIRD PEOPLE · LOVE, WINE WANKERS xx
+
+Copy nuggets
+good wine for people who actually drink it · come for the wine, stay for the people · no prior knowledge required · 18 seats, always sells out · bring someone weird · wine belongs in a glass, not on a pedestal
+
+Do say
+good wine for people who actually drink it · come for the wine, stay for the people · no prior knowledge required · 18 seats, always sells out · bring someone weird · self-deprecating humour · short sentences · lead with people and energy not product · irreverence that signals confidence · ""come drink good wine with us""
+
+Don't say
+curated selection · artisanal experience · premium wine community · exclusive access · sophisticated palate · terroir-forward · natural winemaking philosophy · immersive tasting journey · ""we're passionate about..."" · pét-nat / orange wine jargon in headlines · anything implying wine knowledge required · corporate warmth · wellness framing
+","<section id=""section-08"" class=""page"">
+
+<div class=""page-label"">
+<span class=""n"">08</span> Voice & Messaging
+</div>
+
+<h2>Voice & Messaging</h2>
+
+<p class=""page-intro"">
+Tone of voice, messaging principles, and language system.
+</p>
+
+<div class=""two-col"">
+
+<!-- LEFT COLUMN -->
+<div>
+
+<div class=""rule-block"">
+<h4>Tone of Voice</h4>
+<p>
+Anti-snob, not anti-expert. Warm, curious, slightly irreverent.
+</p>
+</div>
+
+<div class=""rule-block"">
+<h4>Community-first language</h4>
+<p>
+Lead with people, not product.
+</p>
+</div>
+
+<div class=""rule-block"">
+<h4>Copy nuggets</h4>
+<p>
+Short-form phrases and repeatable language system.
+</p>
+</div>
+
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<div class=""dd"">
+
+<div class=""do"">
+<div class=""do-lbl"">Do</div>
+<p>
+Conversational, inclusive, irreverent.
+</p>
+</div>
+
+<div class=""dont"">
+<div class=""dont-lbl"">Don't</div>
+<p>
+Corporate, technical, exclusionary.
+</p>
+</div>
+
+</div>
+
+<p class=""note"">
+Language should feel like an invitation, not a lecture.
+</p>
+
+</div>
+
+</div>
+
+</section>",".card h3{
+font-family:var(--fd);
+font-style:italic;
+font-size:clamp(17px,2vw,22px);
+color:var(--cream);
+margin-bottom:8px;
+}
+
+.card p{
+font-family:var(--fb);
+font-size:14px;
+line-height:1.65;
+color:var(--txt-dim);
+}
+
+.rule-block{
+background:rgba(255,255,255,.025);
+border:1px solid var(--border);
+border-radius:2px;
+padding:18px 22px;
+}
+
+.rule-block h4{
+font-family:var(--fd);
+font-style:italic;
+font-size:16px;
+color:var(--cream);
+}
+
+.rule-block p{
+font-family:var(--fb);
+font-size:12px;
+line-height:1.8;
+color:var(--txt-dim);
+}",
+09,image%2018.png,image%2019.png,BRAND ECOSYSTEM,style_guide_v10.html,style_guide_12.html,,"09. Brand Ecosystem
+Across the ecosystemHow this direction applies to the three related entities. Each has a distinct treatment — no wholesale adoption, no visual confusion.Primary Brand
+Wine Wankers
+The full Spectrum direction applies here. Dark backgrounds dominate for event marketing and digital presence. The refraction bars appear as signature elements on posters, ticketing pages, and email headers. Yellow is the primary CTA colour. Instrument Serif headlines, Newsreader body, JetBrains Mono labels. This is the parent brand that could theoretically outgrow any single venue.
+
+Online Store
+Chasing Rainbows Wine Co.
+A sibling brand sharing the Spectrum DNA but shifting to light mode for e-commerce usability. Aged Paper backgrounds, Wine Stain accents on product cards and category headers. The refraction bars appear as a subtle header strip — the spectrum gradient at reduced opacity, top of page. Typography stays consistent. The name already contains the rainbow — this direction makes that connection explicit and visual.
+
+Host Venue
+The End Bar
+The End has its own identity and shouldn't adopt Wine Wankers' visual system wholesale. When promoting Wine Wankers events, The End uses a co-branded lockup: their existing aesthetic plus the refraction bars as a ""Presented by Wine Wankers"" element. Event nights can feature printed spectrum elements that feel additive, not intrusive. Contextual only.
+","<section id=""section-09"" class=""page"">
+
+<div class=""page-label"">
+<span class=""n"">09</span> Brand Ecosystem
+</div>
+
+<h2>Across the ecosystem</h2>
+
+<div class=""eco-layout"">
+
+<div class=""eco-layer"">
+<div class=""eco-layer-label"">Primary Brand</div>
+<div class=""eco-nodes"">
+<div class=""eco-node primary"">Wine Wankers</div>
+</div>
+</div>
+
+<div class=""eco-layer"">
+<div class=""eco-layer-label"">Online Store</div>
+<div class=""eco-nodes"">
+<div class=""eco-node"">Chasing Rainbows</div>
+</div>
+</div>
+
+</div>
+
+</section>",".eco-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+.eco-layout{
+grid-template-columns:1fr;
+}
+}
+
+.eco-layer{
+border:1px solid var(--border);
+padding:24px;
+border-radius:2px;
+}
+
+.eco-layer-label{
+font-size:9px;
+letter-spacing:.15em;
+text-transform:uppercase;
+margin-bottom:14px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.eco-layer-label::before{
+content:'';
+width:16px;
+height:2px;
+display:inline-block;
+}
+
+.eco-nodes{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.eco-node{
+font-size:13px;
+padding:10px 14px;
+border-left:2px solid var(--border);
+line-height:1.55;
+}
+
+.eco-node.primary{
+color:var(--cream);
+}",".eco-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
+
+.eco-node{
+padding:10px 14px;
+border-left:2px solid var(--border);
+}"
+10,image%2020.png,image%2021.png,COMMUNITY ENGINE,style_guide_v11_patched.html,style_guide_12.html,,"10. Community Engine
+How the Movement Compounds
+""The club is about 60% community and 40% wine. People keep coming back because of who they meet, not what they drink.""
+— Nick Goding, Founder · March 2026
+The community engine is self-reinforcing. Each layer feeds the next. Events build community. Community drives subscriptions. Subscriptions fund events. The brand doesn't need to grow by spending more — it grows by making the existing community more visible to people who want to join it.
+
+Operating now
+Brand / Movement — Spectrum visual identity, anti-pretentious positioning
+Monthly Events — 18 seats, The End Bar, West End
+Chasing Rainbows Wine Co. — Online wine store, 550+ warm contacts
+The End Bar — Host venue, co-branded events
+Growth layer
+Content — Email newsletter + social UGC engine
+Loyalty — Member reward tiers (Show Up → Evangelist)
+Merch — Wearable distribution channel, membership signal
+Venues — Beyond The End, interstate events, pop-up tastings
+Community → events → wine. Not the other way around.",".founder-quote{
+padding:32px 36px;
+border:1px solid rgba(247,220,111,.15);
+background:rgba(247,220,111,.025);
+}
+
+.eco-nodes{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.eco-node{
+font-family:var(--fb);
+font-size:13px;
+color:var(--txt-dim);
+padding:10px 14px;
+background:rgba(255,255,255,.02);
+border-left:2px solid var(--border);
+}
+
+.eco-node.primary{
+border-left-color:var(--sy);
+color:var(--cream);
+}",".founder-quote{
+padding:32px 36px;
+border:1px solid rgba(247,220,111,.15);
+background:rgba(247,220,111,.025);
+}
+
+.eco-closing{
+text-align:center;
+margin-top:28px;
+padding:20px 0;
+border-top:1px solid var(--border);
+}",

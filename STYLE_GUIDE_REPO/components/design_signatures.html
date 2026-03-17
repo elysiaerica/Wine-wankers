@@ -1,0 +1,95 @@
+<section id="section-06" class="page">
+  <div class="page-label">
+    <span class="n">06</span> Design Signatures
+  </div>
+
+  <h2>Design Signatures</h2>
+
+  <p class="page-intro">
+    Rules for developers and designers to maintain consistency without prescribing every
+    element. The signature devices do the heavy lifting.
+  </p>
+
+  <div class="sys-grid">
+    <div class="sys-card">
+      <div class="sys-card-label">Layout approach</div>
+      <h4>Grid &amp; Spacing</h4>
+      <p>
+        Generous margins (80px desktop, 24px mobile). 8px grid baseline. Maximum content
+        width 1200px. Cards use border-radius: 2px or none. Asymmetric layouts preferred —
+        left-anchored content, right-edge spectrum elements.
+      </p>
+    </div>
+
+    <div class="sys-card">
+      <div class="sys-card-label">Border &amp; line style</div>
+      <h4>Subtle Edges</h4>
+      <p>
+        Subtle borders at 1px solid rgba(255,255,255,0.07) on dark backgrounds. 1px solid
+        rgba(0,0,0,0.08) on light. No heavy strokes, no drop shadows. Separation through
+        spacing, not boxing.
+      </p>
+    </div>
+
+    <div class="sys-card">
+      <div class="sys-card-label">Texture &amp; grain</div>
+      <h4>Optional Noise</h4>
+      <p>
+        Optional noise overlay at 2–4% opacity on dark sections. No gradients except the
+        spectrum gradient itself. The scribble layer provides texture in dark contexts
+        without disrupting readability.
+      </p>
+    </div>
+
+    <div class="sys-card">
+      <div class="sys-card-label">Motion notes</div>
+      <h4>Light, Not Reactive</h4>
+      <p>
+        Subtle fade-in on scroll (400ms). Spectrum bars animate in sequence (stagger 50ms
+        per beam). No bounce, no elastic easing. Motion should feel like light changing,
+        not UI reacting.
+      </p>
+    </div>
+  </div>
+
+  <div class="design-signatures-demo">
+    <div class="design-signatures-label">Signature element — Refraction Bars</div>
+
+    <div class="ref-bars">
+      <div class="ref-bar ref-bar-r"></div>
+      <div class="ref-bar ref-bar-o"></div>
+      <div class="ref-bar ref-bar-y"></div>
+      <div class="ref-bar ref-bar-g"></div>
+      <div class="ref-bar ref-bar-t"></div>
+      <div class="ref-bar ref-bar-b"></div>
+      <div class="ref-bar ref-bar-v"></div>
+    </div>
+
+    <p class="design-signatures-meta">
+      7 staggered bars · spectrum order · decreasing width · hero, section transitions,
+      footers
+    </p>
+  </div>
+
+  <div class="design-signatures-demo">
+    <div class="design-signatures-label">Scribble layer demo</div>
+
+    <div class="scribble-demo">
+      <div class="scribble-word">wine</div>
+      <p class="design-signatures-meta">
+        Instrument Serif italic · opacity .035 · 180–220px · dark sections only · not on
+        light pages
+      </p>
+    </div>
+  </div>
+
+  <div class="rule-block">
+    <h4>Refraction bar &amp; beam placement rules</h4>
+    <p>
+      1. Hero sections — as the prism light-scatter signature element at base or side.
+      2. Section transitions between dark pages — not between light sections.
+      3. Special emphasis — footers, covers, closing statements. Do not use as repeating
+      decorative pattern throughout body content.
+    </p>
+  </div>
+</section>
