@@ -142,7 +142,7 @@ button,input{font:inherit;border:none;outline:none}
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#52be80" stroke-width="1.5"/><path d="M6 10l3 3 5-6" stroke="#52be80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       you're in. see you at the table.
     </div>
-    <div style="margin-top:12px">
+    <div id="shareWrap" style="margin-top:12px;display:none">
       <button class="share-btn" id="shareBtn" aria-label="Share Wine Wankers">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
         share with a wine mate
@@ -231,11 +231,13 @@ button,input{font:inherit;border:none;outline:none}
     }).then(() => {
       heroForm.classList.add('hidden');
       heroSuccess.classList.add('show');
+      document.getElementById('shareWrap').style.display = 'block';
       fireConfetti();
     }).catch(() => {
       // Fallback — show success anyway (no-cors always resolves)
       heroForm.classList.add('hidden');
       heroSuccess.classList.add('show');
+      document.getElementById('shareWrap').style.display = 'block';
       fireConfetti();
     });
   }
