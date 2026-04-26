@@ -89,6 +89,9 @@ button,input{font:inherit;border:none;outline:none}
 .footer-copy{font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-ghost)}
 .footer-social a{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-ghost);transition:color .2s}
 .footer-social a:hover{color:var(--sm)}
+.share-btn{background:none;border:none;cursor:pointer;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-ghost);padding:0;transition:color .2s;display:inline-flex;align-items:center;gap:6px}
+.share-btn:hover{color:var(--cream)}
+.share-confirm{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--sg);opacity:0;transition:opacity .3s;pointer-events:none}
 
 /* ── CONFETTI ── */
 .confetti-container{position:fixed;inset:0;pointer-events:none;z-index:999;overflow:hidden}
@@ -139,6 +142,13 @@ button,input{font:inherit;border:none;outline:none}
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#52be80" stroke-width="1.5"/><path d="M6 10l3 3 5-6" stroke="#52be80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       you're in. see you at the table.
     </div>
+    <div style="margin-top:12px">
+      <button class="share-btn" id="shareBtn" aria-label="Share Wine Wankers">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        share with a wine mate
+      </button>
+      <span class="share-confirm" id="shareConfirm">copied</span>
+    </div>
   </div>
 </section>
 
@@ -173,6 +183,22 @@ button,input{font:inherit;border:none;outline:none}
   const heroEmail = document.getElementById('heroEmail');
   const heroBtn = document.getElementById('heroBtn');
   const heroSuccess = document.getElementById('heroSuccess');
+  const shareBtn = document.getElementById('shareBtn');
+  const shareConfirm = document.getElementById('shareConfirm');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      const url = 'https://winewankers.com.au';
+      if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) {
+        try { await navigator.share({ title: 'Wine Wankers', url }); } catch(e) {}
+      } else {
+        try {
+          await navigator.clipboard.writeText(url);
+          shareConfirm.style.opacity = '1';
+          setTimeout(() => { shareConfirm.style.opacity = '0'; }, 2000);
+        } catch(e) {}
+      }
+    });
+  }
 
   heroEmail.addEventListener('input', () => {
     const valid = heroEmail.checkValidity() && heroEmail.value.includes('@') && heroEmail.value.includes('.');
