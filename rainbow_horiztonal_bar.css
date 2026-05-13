@@ -1,0 +1,13 @@
+.rm-bar{
+height:3px;
+border-radius:2px;
+display:block;
+}
+
+.rm-bar.r{background:#e84545;width:62px}
+.rm-bar.o{background:#f5a623;width:54px}
+.rm-bar.y{background:#f7dc6f;width:46px}
+.rm-bar.g{background:#52be80;width:38px}
+.rm-bar.t{background:#48c9b0;width:30px}
+.rm-bar.b{background:#2db5e8;width:24px}
+.rm-bar.v{background:#af7ac5;width:18px}

@@ -1,0 +1,21 @@
+.hero-title span.rainbow-stack{
+text-shadow:
+2px 2px 0 #e84545,
+4px 4px 0 #f5a623,
+6px 6px 0 #f7dc6f,
+8px 8px 0 #52be80,
+10px 10px 0 #48c9b0,
+12px 12px 0 #2db5e8,
+14px 14px 0 #af7ac5;
+}
+
+.rstack{
+text-shadow:
+2px 2px 0 #e84545,
+4px 4px 0 #f5a623,
+6px 6px 0 #f7dc6f,
+8px 8px 0 #52be80,
+10px 10px 0 #48c9b0,
+12px 12px 0 #2db5e8,
+14px 14px 0 #af7ac5;
+}
